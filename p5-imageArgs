@@ -1,0 +1,55 @@
+// Global variables
+var bgimg;
+var pathX = [];
+var pathY = [];
+var charX = pathX;
+var charY = pathY[0]; //gah, how to increment? vector fixes this?
+
+function preload(){
+  bgimg = loadImage("ivory-sherpa-fabric.png");
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  
+  // background color/pattern
+  // ADD for loop to repeat image for width and height of window
+  // According to p5 documentation, this should work but doesn't:  image(bgimg, 0, 0, bgimg.width, bgimg.height, 0, 0, windowWidth, windowHeight);
+  // Fixed so image scales
+  image(bgimg, 0, 0, windowWidth, windowHeight, 0, 0, bgimg.width, bgimg.height);
+  
+  // Define path. 12 indices, 6 (x,y) pairs
+  for (i=0;i<6;i++){
+    // choose random x and y coordinates
+    var x = floor(random(200,1000));
+    var y = floor(random(200,600));
+    
+    append(pathX, x);
+    append(pathY, y);
+    
+  }
+ 
+ // randomly descending vertices
+  sort(pathX);
+  sort(pathY);
+  
+  print(pathX);
+  print(pathY);
+
+}
+
+function draw() {
+  
+  // character avatar
+  fill(240, 0, 0);
+  rect(pathX[0], pathY[0], 20, 20);
+  
+  // create vector from an array (always the same path)?
+  
+ 
+  
+  // path
+  // use same vector that pushes char?
+  
+   
+}
