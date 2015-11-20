@@ -2,9 +2,7 @@
 Celine Wu
 Creative Coding, Fall 2015
 Homework 4 -- drawing trees using an array, beginShape()/endShape(), and noise() onClick
-
-50,700,300,480
-165,373,584,192
+Interactive view:  http://codepen.io/cw1208/pen/dYLWjr#0
 */
 
 var noiseScaleSize;
@@ -21,7 +19,6 @@ function setup() {
   // Canvas
   createCanvas(windowWidth, windowHeight);
   background(30);
-  //text("Click to see noise()");   // WHAT IS THE SYNTAX???  CENTER
   instructions();
 }
 
@@ -39,7 +36,7 @@ function instructions(){
   text(s, (windowWidth/2-90), 50, 200, 50);
 }
 
-function newTree(){   // Use newSingleTree() instead
+function newTree(){   // IGNORE THIS! Use newSingleTree() instead
   // Clear previous trees
   pathX = [];
   pathY = [];
@@ -123,8 +120,6 @@ function colored(){
 function mouseClicked() {
   // beginShape() won't take x and y of a vertex from two different arrays!  Use newSingleTree() to take values from a single array (path)
   //newTree();
-  clear();
-  instructions();
   newSingleTree();
   tree();
 }
