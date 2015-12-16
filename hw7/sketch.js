@@ -2,7 +2,7 @@
 Creative Coding, Fall 2015
 Homework 7 -- use JSON data
 Takes current temperature and humidity weather readings for Union Square, Manhattan, NY, NY 10003. Fills the background blue from the bottom up for humidity reading and displays temp and humidity % as text.
-Interactive view:  http://codepen.io/cw1208/pen/______
+Interactive view:  http://codepen.io/cw1208/pen/addrZV
 */
 
 var weather;
