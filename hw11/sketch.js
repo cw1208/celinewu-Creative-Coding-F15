@@ -1,9 +1,9 @@
 /* Celine Wu
 Creative Coding, Fall 2015
-Homework 6
+Homework 11
 Use a spritesheet to create a small animation
 Fixed mouseClicked behavior, added tree obstacle that disappears on click.
-CodePens link: (not connecting to p5 library?) http://codepen.io/cw1208/pen/QyNLod
+CodePens link: (how to link images and sprite sheet?) http://codepen.io/cw1208/pen/JGXbQm
 */
 
 // original code by:
