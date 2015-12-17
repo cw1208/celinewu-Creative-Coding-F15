@@ -3,6 +3,7 @@ Celine Wu
 Creative Coding, Fall 2015
 Homework 5 -- Redesign a clock using trigonometry and time functions
 Metronome oscillating second hand, large hour numbers center top, smaller minutes below
+Interactive view: http://codepen.io/cw1208/pen/addrmV
 */
 
 var font;
