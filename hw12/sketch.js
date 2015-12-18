@@ -1,3 +1,10 @@
+/* Celine Wu
+Creative Coding, Fall 2015
+Homework 12
+Video manipulation assignment
+Code based on class notes
+*/
+
 /*
  * @name Video Cues
  * @description <p>Load a video and create a DOM element for it to play inside</p>
@@ -9,7 +16,7 @@ var space;
 var bgColor;
 
 function setup() {
-  bgColor = color(255,255,255);
+  bgColor = color(155,55,155);
   createCanvas(windowWidth,windowHeight);
   // specify multiple formats for different browsers
   space = createVideo(['media/anni003.mp4']);
@@ -27,7 +34,8 @@ function draw(){
   text("current video time: " + space.time(), 20,32);
   text("video duration: " + space.duration(), 20,64);
   
-  space.addCue(3.0, changeBgColor, color(123,0,23));
+  space.addCue(2.3, changeBgColor, color(123,0,23));
+  space.addCue(2.3, addImage, ('media/happyCat.png',0,200));
   space.addCue(4.0, changeBgColor, color(0,124,23));
   space.addCue(6.5, changeBgColor, color(23,0,125));
   
@@ -36,3 +44,8 @@ function draw(){
 function changeBgColor(col){
   bgColor = col;
 }
+
+function addImage(path, x, y){
+  image(loadImage(path),0,0,image.width, image.height, x, y);
+}
+
